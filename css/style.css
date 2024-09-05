@@ -1,0 +1,248 @@
+/* Estilos gerais para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  background-color: palegreen;
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+}
+
+/* Estilos para o cabeçalho da página */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #333;
+  color: #fff;
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+/* Estilos para o container do logo e nome do projeto */
+.div-logo {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Permite que o container do logo use o espaço disponível */
+}
+
+/* Estilos para o logotipo */
+.logo {
+  width: 40px; /* Ajustado para dispositivos móveis */
+  height: 40px; /* Ajustado para dispositivos móveis */
+  margin: 0 10px; /* Ajustado para não exceder a largura */
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 5px; /* Reduzido para evitar overflow */
+}
+
+/* Estilos para a imagem dentro do logotipo */
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* Estilos para o texto do cabeçalho */
+header label {
+  font-size: 14px; /* Ajustado para dispositivos móveis */
+  color: #fff;
+  margin-left: 0;
+  margin-top: 5px;
+}
+
+/* Estilos para o menu de navegação do cabeçalho */
+header nav {
+  flex: 1;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+}
+
+header nav ul li {
+  margin-right: 10px; /* Reduzido para ajustar melhor em telas pequenas */
+}
+
+/* Estilos para os links do menu de navegação */
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: lightgreen;
+}
+
+/* Estilos para o conteúdo principal da página */
+main {
+  width: 100%;
+  margin: 0 auto;
+  min-height: calc(100vh - 60px); /* Ajustado para considerar o cabeçalho fixo */
+  padding: 20px;
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilos para as seções da página */
+section {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ajustado para dispositivos móveis */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+/* Estilos para os títulos das seções */
+section h2 {
+  font-size: 20px; /* Ajustado para dispositivos móveis */
+  margin-bottom: 10px;
+}
+
+/* Estilos para as listas não ordenadas dentro das seções */
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Estilos para os itens de lista dentro das seções */
+section li {
+  margin-bottom: 10px; /* Reduzido para melhor ajuste */
+}
+
+/* Estilos para os títulos de nível 3 dentro das seções */
+section h3 {
+  font-size: 18px; /* Ajustado para dispositivos móveis */
+  margin-bottom: 5px;
+}
+
+/* Estilos para os parágrafos dentro das seções */
+section p {
+  font-size: 14px; /* Ajustado para dispositivos móveis */
+}
+
+/* Estilos para as imagens dentro das seções */
+section img {
+  width: 100%; /* Ajustado para não exceder o container */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Estilos para o rodapé da página */
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 8vh;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para os parágrafos dentro do rodapé */
+footer p {
+  margin: 0;
+}
+
+/* Estilos para os links dentro do rodapé */
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: lightgreen;
+}
+
+/* Estilos para telas de tablet e celular (até 768px de largura) */
+@media only screen and (max-width: 768px) {
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header nav ul {
+    display: none;
+  }
+
+  .div-logo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .div-logo .logo {
+    width: 40px; /* Mantido para dispositivos móveis */
+    height: 40px; /* Mantido para dispositivos móveis */
+  }
+
+  .div-logo label {
+    font-size: 14px;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .menu-hamburguer {
+    display: block;
+    right: 0;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .menu-hamburguer span {
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    transition: 0.3s ease;
+  }
+
+  .menu-hamburguer.aberto span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menu-hamburguer.aberto span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-hamburguer.aberto span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  header nav.aberto ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; /* Ajustado para ocupar toda a largura da tela */
+    background-color: #333;
+    text-align: center;
+  }
+
+  header nav.aberto ul li {
+    margin: 10px 0;
+  }
+}
